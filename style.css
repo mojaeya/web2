@@ -1,0 +1,40 @@
+body{
+  margin:0;
+}
+a {
+  color:black;
+  text-decoration: none;
+}
+h1 {
+ font-size:45px;
+ text-align: center;
+ border-bottom:1px solid gray;
+ margin:0;
+ padding:20px;
+}
+ol{
+  border-right:1px solid gray;
+  width:100px;
+  margin:0;
+  padding:20px;
+}
+#grid{
+  display: grid;
+  grid-template-columns: 150px 1fr;
+}
+#grid ol{ /* ol을 단독으로 쓰면 나중에 ol이 네이게이션역할이 아닌 본문의 내용을 포함할 수도 있기에 좋은 방법 X */
+  padding-left:33px;
+}
+#grid #article{ /* #article이 id로 설정되어 있기에 이것만 써도 되지만 앞에 #grid를 붙임으로 더 확실하게 해주는 방법임*/
+  padding-left:25px;
+}
+@media(max-width:800px){
+  #grid{
+    display: block;
+}
+ol{
+border-right:none;
+}
+h1{
+border-bottom:none;
+}
